@@ -1,0 +1,6 @@
+.commission {
+  background: #cf195c;
+  background: linear-gradient(to right, #cf195c 0%, #06cfa7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
