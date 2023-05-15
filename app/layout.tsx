@@ -35,7 +35,7 @@ export default function RootLayout({
 
             </div>
           </nav>
-          <main className='mb-auto'>
+          <main className='mb-auto pb-20'>
             {children}
           </main>
         </div>
