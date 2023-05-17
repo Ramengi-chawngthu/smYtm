@@ -1,6 +1,7 @@
 import News from './components/News';
 import { getAllPosts } from '@/sanity/sanity-utils';
 
+export const revalidate = 60;
 
 interface postType{
   _createdAt: string,
