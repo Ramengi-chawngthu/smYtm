@@ -12,7 +12,7 @@ function About() {
         <p className="mt-16 text-3xl md:text-5xl text-center">Chutichuan, kal ula, <span className={styles.commission}>hnam tina mi</span> zirtîrahte siam ula, ...</p>
         <p className="text-right text-xl md:text-2xl mt-4 font-bold">Matthaia 28:19</p>
         <h2 className="text-center text-3xl md:text-5xl mt-20 font-bold">Thuthiam</h2>
-        <p className="mt-16 text-3xl md:text-5xl text-center">Tin, he Ram Chanchin Ṭha hi <span className={styles.commission}>hnam zawng zawng</span> hriattîrna tûrin <span className={styles.commission}>khawvêl zawng zawngah</span> hrilin a awm ang a; chumi zawhah chuan tâwpna chu a lo thleng ang</p>
+        <p className="mt-16 text-3xl md:text-5xl text-center">Tin, he Ram Chanchin Ṭha hi <span className={styles.commission}>hnam zawng zawng</span> hriattîrna tûrin <span className={styles.commission}>khawvêl zawng zawngah</span> hrilin a awm ang a; chumi zawhah chuan <span className={styles.commission}>tâwpna</span> chu a lo thleng ang</p>
         <p className="text-right text-xl md:text-2xl mt-4 font-bold">Matthaia 24:14</p>
       </div>
 
