@@ -1,9 +1,6 @@
-
-
 function SubHeading(props: any) {
 
     const { subHeading, body, prayerPoints } = props;
-    console.log({subHeading, body, prayerPoints});
 
     return (
         <>
