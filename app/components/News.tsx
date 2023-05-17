@@ -40,7 +40,7 @@ function Content({title, slug, author, date, _id}:postType) {
                     <div className="space-y-5 xl:col-span-3">
                         <div className="space-y-6">
                             <div>
-                                <Link href='/posts/1'>
+                                <Link href={`/posts/${_id}`}>
                                     <h2 className="text-3xl font-bold leading-8 tracking-tight ">{title}</h2>
                                 </Link>
                             </div>

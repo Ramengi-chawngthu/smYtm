@@ -9,7 +9,7 @@ export default {
         type: 'string',
         description: 'Write your name',
         validation: (Rule: any) =>
-          Rule.required().max(100).min(4).warning(`Name cannot be less than 4 characters or exceed 100 characters`),
+          Rule.required().max(30).min(4).warning(`Name cannot be less than 4 characters or exceed 20 characters`),
       },
       {
           name: 'slug',
@@ -17,7 +17,7 @@ export default {
           type: 'string',
           description: 'Write a short summary of the news you are going to share',
           validation: (Rule: any) =>
-            Rule.required().max(30).min(4).warning(`Title cannot be less than 4 characters or exceed 30 characters`),
+            Rule.required().max(100).min(4).warning(`Title cannot be less than 4 characters or exceed 100 characters`),
         },
       {
         name: 'title',
