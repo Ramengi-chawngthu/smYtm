@@ -9,7 +9,7 @@ export default {
         type: 'string',
         description: 'Write your name',
         validation: (Rule: any) =>
-          Rule.required().max(30).min(4).warning(`Name cannot be less than 4 characters or exceed 20 characters`),
+          Rule.required().max(100).min(4).warning(`Name cannot be less than 4 characters or exceed 100 characters`),
       },
       {
           name: 'slug',
