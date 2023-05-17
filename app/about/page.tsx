@@ -1,5 +1,7 @@
 import styles from './styles.module.css'
 
+
+
 function About() {
   return (
     <>
@@ -7,7 +9,7 @@ function About() {
         He SM & YTM Movement hi 10/40 window huam chhung rama rawngbawla kal leh la kal tur ho chanchin ziahna a ni.
       </h1>
       <div>
-        <h1 className={"text-center text-5xl md:text-8xl font-bold mt-36" + " " + styles.commission}>Thupek leh Thutiam Ropui tak chu</h1>
+        <h1 className={"text-center text-5xl md:text-8xl font-bold mt-36" + " " + styles.commission}>Thupek leh Thutiam Ropui tak chu 🗺</h1>
         <h2 className="text-center text-3xl md:text-5xl mt-32 font-bold">Thupek</h2>
         <p className="mt-16 text-3xl md:text-5xl text-center">Chutichuan, kal ula, <span className={styles.commission}>hnam tina mi</span> zirtîrahte siam ula, ...</p>
         <p className="text-right text-xl md:text-2xl mt-4 font-bold">Matthaia 28:19</p>
