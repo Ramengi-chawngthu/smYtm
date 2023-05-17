@@ -1,7 +1,7 @@
 import SubHeading from './SubHeading';
 import styles from './styles.module.css'
 import { JetBrains_Mono } from "next/font/google";
-import { getPostById} from '@/sanity/sanity-utils'
+import { getPostById } from '@/sanity/sanity-utils'
 import formatDate from '@/utils/date-utils';
 import Link from 'next/link';
 import Button from '@/app/components/Button';
@@ -24,19 +24,19 @@ async function Post({ params }: PostId) {
 
     const id = params.id;
     const post = await getPostById(id);
-    
+
     console.log(post);
-    if(!post.length){
-        return <>
+    if (!post.length) {
+        return (<>
             <h1 className="text-8xl">Sorry can't find what you're looking for</h1>
             <div className="mt-12 flex justify-center">
-            <Button><Link href='/'>Go back</Link></Button>
+                <Button><Link href='/'>Go back</Link></Button>
             </div>
-        </>
+        </>)
     }
 
-   
-    
+
+
     const { _createdAt, souls, author, title, nationName, teams, nationNews, prayerPoints } = post[0];
     const date = formatDate(_createdAt);
 
