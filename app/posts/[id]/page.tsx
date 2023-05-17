@@ -29,7 +29,7 @@ async function Post({ params }: PostId) {
         return (<>
             <h1 className="text-8xl">Sorry can't find what you're looking for</h1>
             <div className="mt-12 flex justify-center">
-                <Button><Link href='/'>Go back</Link></Button>
+                <Button><Link href="/">Go back</Link></Button>
             </div>
         </>)
     }
