@@ -25,7 +25,6 @@ async function Post({ params }: PostId) {
     const id = params.id;
     const post = await getPostById(id);
 
-    console.log(post);
     if (!post.length) {
         return (<>
             <h1 className="text-8xl">Sorry can't find what you're looking for</h1>
