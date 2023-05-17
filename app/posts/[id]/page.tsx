@@ -37,11 +37,11 @@ function Post({ params }: PostId) {
                                 <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
                                     {title}
                                 </h1>
-                                <h2 className={"text-right mt-4 font-medium " + jetBrains_Mono.className}>Written by: {author}</h2>
+                                <h2 className={"text-right mt-4 font-medium" + " " + jetBrains_Mono.className}>Written by: {author}</h2>
                             </div>
                         </div>
                     </header>
-                    <div className={"pt-4 " + styles.post}>
+                    <div className={"pt-4" + " " + styles.post}>
                         {/* content here */}
                         
                             <SubHeading subHeading={'Hnam(Nations) chungchang'} body={'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, maxime at provident expedita magni necessitatibus quaerat incidunt aut itaque, voluptates culpa fuga voluptatum placeat! Sequi consectetur autem aut distinctio voluptatibus'} />
