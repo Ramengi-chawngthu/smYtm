@@ -27,9 +27,9 @@ async function Post({ params }: PostId) {
 
     if (!post.length) {
         return (<>
-            <h1 className="text-8xl">Sorry can't find what you're looking for</h1>
+            <h1 className="text-8xl">Sorry can&apos;t find what you're looking for</h1>
             <div className="mt-12 flex justify-center">
-                <Button><Link href="/">Go back</Link></Button>
+                <Button><Link href="./">Go back</Link></Button>
             </div>
         </>)
     }
@@ -38,8 +38,6 @@ async function Post({ params }: PostId) {
 
     const { _createdAt, souls, author, title, nationName, teams, nationNews, prayerPoints } = post[0];
     const date = formatDate(_createdAt);
-
-    console.log(_createdAt, souls);
 
 
     return (
