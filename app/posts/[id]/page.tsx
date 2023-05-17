@@ -1,6 +1,11 @@
 import SubHeading from './SubHeading';
 import styles from './styles.module.css'
 import { JetBrains_Mono } from "next/font/google";
+import { getPostById} from '@/sanity/sanity-utils'
+import formatDate from '@/utils/date-utils';
+import Link from 'next/link';
+
+
 const jetBrains_Mono = JetBrains_Mono({ subsets: ['latin'] });
 
 interface PostId {
@@ -11,12 +16,15 @@ interface PostId {
 
 
 
-function Post({ params }: PostId) {
-    const id = Number(params.id);
-    const title = 'Valley of Dry Bones'
-    const author = 'Peka'
-    const nation = 'Syria'
-    const date = 'August 7, 2021'
+async function Post({ params }: PostId) {
+
+
+
+    const id = params.id;
+    const post = await getPostById(id);
+    const { _createdAt, souls, author, title, nationName, teams, nationNews, prayerPoints } = post;
+    const date = formatDate(_createdAt);
+
 
 
     return (
@@ -37,20 +45,21 @@ function Post({ params }: PostId) {
                                 <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
                                     {title}
                                 </h1>
-                                <h2 className={"text-right mt-4 font-medium" + " " + jetBrains_Mono.className}>Written by: {author}</h2>
+
+                                <div className="flex justify-between">
+                                    <h2 className={"text-right mt-4 font-medium " + jetBrains_Mono.className}><Link href="./">Go Back</Link></h2>
+                                    <h2 className={"text-right mt-4 font-medium " + jetBrains_Mono.className}>Written by: {author}</h2>
+                                </div>
+
                             </div>
                         </div>
                     </header>
-                    <div className={"pt-4" + " " + styles.post}>
-                        {/* content here */}
-                        
-                            <SubHeading subHeading={'Hnam(Nations) chungchang'} body={'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, maxime at provident expedita magni necessitatibus quaerat incidunt aut itaque, voluptates culpa fuga voluptatum placeat! Sequi consectetur autem aut distinctio voluptatibus'} />
-                    
-                            <SubHeading subHeading={'Thlarau bo chungchang'} body={'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, maxime at provident expedita magni necessitatibus quaerat incidunt aut itaque, voluptates culpa fuga voluptatum placeat! Sequi consectetur autem aut distinctio voluptatibus'} />
 
-                            <SubHeading subHeading={'Rawngbawlpui(Teams) chungchang'} body={'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, maxime at provident expedita magni necessitatibus quaerat incidunt aut itaque, voluptates culpa fuga voluptatum placeat! Sequi consectetur autem aut distinctio voluptatibus'} />
-
-                            <SubHeading subHeading={'Tawngtai Thupui(Prayer Points)'} body={'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, maxime at provident expedita magni necessitatibus quaerat incidunt aut itaque, voluptates culpa fuga voluptatum placeat! Sequi consectetur autem aut distinctio voluptatibus'} />
+                    <div className={"pt-4 " + styles.post}>
+                        <SubHeading subHeading={nationName} body={nationNews} />
+                        {souls !== null && <SubHeading subHeading={'Thlarau bo chungchang'} body={souls} />}
+                        {teams !== null && <SubHeading subHeading={'Rawngbawlpui(Teams) chungchang'} body={teams} />}
+                        {prayerPoints !== null && <SubHeading subHeading={'Tawngtai Thupui(Prayer Points)'} prayerPoints={prayerPoints} />}
 
                     </div>
                 </div>
