@@ -49,7 +49,7 @@ async function Post({ params }: PostId) {
   const date = formatDate(_createdAt);
   const imageUrl =
     mainImage &&
-    urlForImage(mainImage)?.height(500).width(500).fit('crop').url();
+    urlForImage(mainImage)?.height(600).fit('clip').url();
 
   return (
     <div className='mx-auto max-w-3xl px-4 pb-20 sm:px-6 xl:max-w-5xl xl:px-0'>
