@@ -1,14 +1,7 @@
-.gradient1 {
-  background: #1BCF5D;
-background: linear-gradient(to right, #1BCF5D 0%, #CF3E3E 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-
-}
-
-.gradient2 {
+.commission {
   background: #cf195c;
   background: linear-gradient(to right, #cf195c 0%, #06cfa7 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
