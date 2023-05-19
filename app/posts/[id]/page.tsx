@@ -133,6 +133,11 @@ async function Post({ params }: PostId) {
                 prayerPoints={prayerPoints}
               />
             )}
+            <div className="mt-12">
+            <Link href='./'>
+              <Button>Go Back</Button>
+            </Link>
+            </div>
           </div>
         </div>
       </article>
