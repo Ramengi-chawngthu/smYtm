@@ -41,16 +41,16 @@ function Content({title, slug, author, date, _id}:postType) {
                         <div className="space-y-6">
                             <div>
                                 <Link href={`/posts/${_id}`}>
-                                    <h2 className="text-3xl font-bold leading-8 tracking-tight ">{title}</h2>
+                                    <h2 className="text-3xl font-bold leading-8 tracking-tight mt-8">{title}</h2>
                                 </Link>
                             </div>
                             <div className="prose max-w-none text-gray-600 text-xl">
                                 {slug}
                             </div>
                         </div>
-                        <div className="flex justify-between text-base font-medium leading-6">
-                            <Link href={`/posts/${_id}`}><Button>Read More ➤</Button></Link>
-                            <span className={jetBrains_Mono.className}>Written by: {author}</span>
+                        <div className="flex justify-between text-base font-medium leading-6 mt-12">
+                            <Link href={`/posts/${_id}`} className="text-base"><Button>Read More ➤</Button></Link>
+                            <span className={ "text-base md:text-xl ml-2" + " " + jetBrains_Mono.className}>Ziaktu: {author}</span>
                         </div>
                     </div>
                 </div>

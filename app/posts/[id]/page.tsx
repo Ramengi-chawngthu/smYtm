@@ -39,7 +39,6 @@ async function Post({ params }: PostId) {
     const { _createdAt, souls, author, title, nationName, teams, nationNews, prayerPoints } = post[0];
     const date = formatDate(_createdAt);
 
-
     return (
         <div className="mx-auto max-w-3xl px-4 pb-20 sm:px-6 xl:max-w-5xl xl:px-0">
             <article>
@@ -59,9 +58,9 @@ async function Post({ params }: PostId) {
                                     {title}
                                 </h1>
 
-                                <div className="flex justify-between">
-                                    <h2 className={"text-right mt-4 font-medium text-xl" + " " + jetBrains_Mono.className}><Link href="./">Go Back</Link></h2>
-                                    <h2 className={"text-right mt-4 font-medium text-xl" + " " + jetBrains_Mono.className}>Written by: {author}</h2>
+                                <div className="flex justify-between mt-8">
+                                    <h2 className={"text-center mt-4 font-medium text-base sm:text-xl" + " " + jetBrains_Mono.className}><Link href="./"><Button>Go Back</Button></Link></h2>
+                                    <h2 className={"text-center mt-4 ml-4 font-medium text-base sm:text-xl" + " " + jetBrains_Mono.className}>Written by: {author}</h2>
                                 </div>
 
                             </div>
@@ -72,7 +71,7 @@ async function Post({ params }: PostId) {
                         <SubHeading subHeading={nationName} body={nationNews} />
                         {souls !== null && <SubHeading subHeading={'Thlarau bo chungchang'} body={souls} />}
                         {teams !== null && <SubHeading subHeading={'Rawngbawlpui(Teams) chungchang'} body={teams} />}
-                        {prayerPoints !== null && <SubHeading subHeading={'Tawngtai Thupui(Prayer Points)'} prayerPoints={prayerPoints} />}
+                        {prayerPoints[0].length > 0 && <SubHeading subHeading={'Tawngtai Thupui(Prayer Points)'} prayerPoints={prayerPoints} />}
 
                     </div>
                 </div>

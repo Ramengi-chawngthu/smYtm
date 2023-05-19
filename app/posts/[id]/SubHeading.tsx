@@ -10,7 +10,7 @@ function SubHeading(props: any) {
             body !== undefined &&   
                 <p className='text-xl md:text-2xl mt-4'>{body}</p>
             }
-            {prayerPoints !==  undefined && prayerPoints.map((prayerPoint:string, index:number) => <p className='text-xl md:text-2xl mt-4' key={index.toString() + prayerPoint[0]}>{prayerPoint}</p>)}
+            {prayerPoints !==  undefined && prayerPoints.map((prayerPoint:string, index:number) => <p className='text-xl md:text-2xl mt-4' key={index.toString() + prayerPoint[0]}>🙏 {prayerPoint}</p>)}
         </div>
         
         </>

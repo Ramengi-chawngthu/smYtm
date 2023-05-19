@@ -27,7 +27,7 @@ export default function RootLayout({
             </div>
             <div className='flex items-center text-base leading-5'>
               <div>
-                <Link href='/' className='font-bold text-xl sm:text-2xl mr-4'>Home</Link>
+                <Link href='/' className='font-bold text-xl sm:text-2xl mr-6'>Home</Link>
               </div>
               <div>
                 <Link href='/about' className='font-bold text-xl sm:text-2xl'>About</Link>
