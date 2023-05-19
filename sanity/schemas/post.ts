@@ -66,7 +66,7 @@ export default {
         name: 'mainImage',
         title: 'Main Image',
         type: 'image',
-        description: 'You can share one image. Can be blank',
+        description: 'You can share one image. Can be blank (JPG, SVG, PNG, GIF or TIFF are supported)',
       },
     ],
   }
