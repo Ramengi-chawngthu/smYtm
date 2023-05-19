@@ -89,7 +89,7 @@ async function Post({ params }: PostId) {
                       jetBrains_Mono.className
                     }
                   >
-                    Written by: {author}
+                    Ziaktu: {author}
                   </h2>
                 </div>
               </div>

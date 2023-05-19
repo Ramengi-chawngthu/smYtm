@@ -1,7 +1,30 @@
-.commission {
+.gradient1 {
+  background: #1BCF5D;
+background: linear-gradient(to right, #1BCF5D 0%, #CF3E3E 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+}
+
+.gradient2 {
   background: #cf195c;
   background: linear-gradient(to right, #cf195c 0%, #06cfa7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.localBoxShadow {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all 0.3s ease;
+}
+
+.localBoxShadow:hover {
+  transform: translateY(-4px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+}
+
+@media only screen and (min-width: 600px) {
+  .localBoxShadow {
+    border-radius: 34% 34% 4% 4% / 17% 17% 4% 4%;
+  }
+}
