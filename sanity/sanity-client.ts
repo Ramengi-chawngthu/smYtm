@@ -8,6 +8,7 @@ const client = createClient({
     projectId,
     dataset,
     apiVersion,
+    useCdn: true
   })
 
 export default client;
